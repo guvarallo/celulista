@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :anuncios
   devise_for :users
-  root 'pages#home'
+  root 'anuncios#index'
   get  'sobre' => 'pages#sobre'
   get  'anuncios' => 'pages#anuncios'
 

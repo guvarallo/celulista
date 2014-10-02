@@ -1,6 +1,6 @@
-<%= form_for @pin, html: { multipart: true } do |f| %>
-  <% if @pin.errors.any? %>
-      <% @pin.errors.full_messages.each do |msg| %>
+<%= form_for @anuncio, html: { multipart: true } do |f| %>
+  <% if @anuncio.errors.any? %>
+      <% @anuncio.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

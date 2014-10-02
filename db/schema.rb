@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141002020625) do
+ActiveRecord::Schema.define(version: 20141002025615) do
 
   create_table "anuncios", force: true do |t|
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "image"
+    t.string   "title"
   end
 
   add_index "anuncios", ["user_id"], name: "index_anuncios_on_user_id"

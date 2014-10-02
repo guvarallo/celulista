@@ -2,7 +2,7 @@
   <div class="col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading text-center">
-        <%= image_tag @anuncio.image.url(:medium) %>
+        <%= image_tag @anuncio.image.url %>
       </div>
       <div class="panel-body">
         <p><%= @anuncio.title %></p>
@@ -25,5 +25,5 @@
   </div>
 </div>
 <div class="text-center">
-  <%= link_to 'Voltar', pins_path, class: "btn btn-success btn-lg" %>
+  <%= link_to 'Voltar', anuncios_path, class: "btn btn-success btn-lg" %>
 </div>
