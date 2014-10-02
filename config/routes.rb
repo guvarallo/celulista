@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :anuncios
+  devise_for :users
   root 'pages#home'
   get  'sobre' => 'pages#sobre'
   get  'anuncios' => 'pages#anuncios'
