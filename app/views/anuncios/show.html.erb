@@ -1,9 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading text-center">
+        <%= image_tag @anuncio.image.url(:medium) %>
+      </div>
+      <div class="panel-body">
+        <p><%= @anuncio.title %></p>
+        <p><%= @anuncio.description %></p>
+        <p><strong><%= @anuncio.user.name if @anuncio.user %></strong></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @anuncio.description %>
-</p>
+        <% if @anuncio.user == current_user %>
+          <div class="actions">
+            <%= link_to edit_anuncio_path(@anuncio) do %>
+              <span class="glyphicon glyphicon-edit"></span>Edit
+            <% end %>
+            <%= link_to @anuncio, method: :delete, data: { confirm: 'Você tem certeza?' } do %>
+              <span class="glyphicon glyphicon-trash"></span>Deletar
+            <% end %>
+          </div>
+        <% end %>
 
-<%= link_to 'Edit', edit_anuncio_path(@anuncio) %> |
-<%= link_to 'Back', anuncios_path %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center">
+  <%= link_to 'Voltar', pins_path, class: "btn btn-success btn-lg" %>
+</div>
