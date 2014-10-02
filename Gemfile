@@ -9,12 +9,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'sass-rails', '>= 3.2'
+gem "paperclip", "~> 4.2"
 gem 'autoprefixer-rails'
 gem 'devise'
 gem 'masonry-rails', '~> 0.2.0'
 gem 'will_paginate', '~> 3.0.5'
 gem 'will_paginate-bootstrap'
-gem 'carrierwave'
 
 group :development, :test do
   gem 'spring'
