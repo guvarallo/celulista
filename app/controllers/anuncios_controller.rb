@@ -18,7 +18,7 @@ class AnunciosController < ApplicationController
   end
 
   def create
-    @anuncio = Anuncio.new(anuncio_params)
+    @anuncio = current_user.anuncios.build(anuncio_params)
     if @anuncio.save
       redirect_to @anuncio, notice: 'Anuncio criado com sucesso!'
     else
@@ -51,6 +51,6 @@ class AnunciosController < ApplicationController
     end
 
     def anuncio_params
-      params.require(:anuncio).permit(:description)
+      params.require(:anuncio).permit(:description, :image, :title)
     end
 end

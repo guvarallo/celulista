@@ -3,7 +3,7 @@
 <div id="pins" class="transitions-enabled">
   <% @anuncios.each do |anuncio| %>
     <div class="box panel panel-default">
-      <%= link_to image_tag(anuncio.image.url), anuncio %>
+      <%= link_to image_tag(anuncio.image.url(:medium)), anuncio %>
       <div class="panel-body">
         <%= anuncio.title %><br/>
         <strong><%= anuncio.user.name if anuncio.user %></strong>
