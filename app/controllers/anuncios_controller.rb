@@ -17,6 +17,10 @@ class AnunciosController < ApplicationController
   def edit
   end
 
+  def meus_anuncios
+    @anuncios = current_user.anuncios.order("created_at DESC")
+  end
+
   def create
     @anuncio = current_user.anuncios.build(anuncio_params)
     if @anuncio.save
@@ -46,7 +50,7 @@ class AnunciosController < ApplicationController
     end
     
     def correct_user
-      @anuncio = current_user.anuncio.find_by(id: params[:id])
+      @anuncio = current_user.anuncios.find_by(id: params[:id])
       redirect_to anuncios_path, notice: "Não autorizado a atualizar esse anúncio!" if @anuncio.nil?
     end
 

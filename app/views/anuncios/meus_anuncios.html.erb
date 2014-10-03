@@ -1,14 +1,11 @@
-<%= render 'pages/home' unless user_signed_in? %>
-
 <div id="anuncios" class="transitions-enabled">
   <% @anuncios.each do |anuncio| %>
     <div class="box panel panel-default">
       <%= link_to image_tag(anuncio.image.url(:medium)), anuncio %>
       <div class="panel-body">
-        <%= anuncio.title %><br/>
+        <%= anuncio.description %><br/>
         <strong><%= anuncio.user.name if anuncio.user %></strong>
         
-        <% if current_user && anuncio.user == current_user %>
           <div class="actions">
             <%= link_to edit_anuncio_path(anuncio) do %>
               <span class="glyphicon glyphicon-edit"></span>Editar
@@ -17,13 +14,8 @@
               <span class="glyphicon glyphicon-trash"></span>Deletar
             <% end %>
           </div>
-        <% end %>
         
       </div>
     </div>
   <% end %>
-</div>
-
-<div class="text-center">
-   <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
 </div>

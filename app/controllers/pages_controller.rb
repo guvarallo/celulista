@@ -5,6 +5,6 @@ class PagesController < ApplicationController
   def sobre
   end
 
-  def anuncios
+  def meus_anuncios
   end
 end

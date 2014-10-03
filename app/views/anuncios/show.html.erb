@@ -12,7 +12,7 @@
         <% if @anuncio.user == current_user %>
           <div class="actions">
             <%= link_to edit_anuncio_path(@anuncio) do %>
-              <span class="glyphicon glyphicon-edit"></span>Edit
+              <span class="glyphicon glyphicon-edit"></span>Editar
             <% end %>
             <%= link_to @anuncio, method: :delete, data: { confirm: 'Você tem certeza?' } do %>
               <span class="glyphicon glyphicon-trash"></span>Deletar

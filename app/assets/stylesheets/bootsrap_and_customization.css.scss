@@ -30,9 +30,18 @@ $icon-font-path: 'bootstrap/'; /*Corrects the issue of not showing glyphicons */
   margin-left: 22px;
 }
 
-/* .new_pin {
-  color: #000;
-} */
+#pins {
+  margin: 0 auto;
+}
+
+.box {
+  margin: 5px;
+  width: 214px;
+}
+
+.box img {
+  width: 100%;
+}
 
 .panel-footer {
   a:link {color: #27ae60; font-weight: bold; text-decoration: none; }

@@ -21,7 +21,7 @@
 
         <% if user_signed_in? %>
           <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Meus anúncios", "#" %></li>
+          <li><%= link_to "Meus anúncios", meus_anuncios_path %></li>
           <li><%= link_to "Criar Anúncio", new_anuncio_path %></li>
           <li><%= link_to "Configurações", edit_user_registration_path %></li>  
           <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>

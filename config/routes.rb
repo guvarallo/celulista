@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'anuncios#index'
   get  'sobre' => 'pages#sobre'
-  get  'anuncios' => 'pages#anuncios'
+  get  'meus_anuncios' => 'anuncios#meus_anuncios'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
