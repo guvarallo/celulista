@@ -5,7 +5,7 @@
     <div class="box panel panel-default">
       <%= link_to image_tag(anuncio.image.url(:medium)), anuncio %>
       <div class="panel-body">
-        <%= anuncio.title %><br/>
+        <%= anuncio.description %><br/>
         <strong><%= anuncio.user.name if anuncio.user %></strong>
         
         <% if current_user && anuncio.user == current_user %>
@@ -18,7 +18,7 @@
             <% end %>
           </div>
         <% end %>
-        
+
       </div>
     </div>
   <% end %>
